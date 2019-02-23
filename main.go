@@ -2,7 +2,10 @@ package main
 
 import (
 	"fmt"
+	"github.com/gin-gonic/gin"
 	"github.com/lotteryjs/winning/log"
+	"github.com/lotteryjs/winning/model"
+	"io"
 	"math/rand"
 	"os"
 	"time"
@@ -17,6 +20,15 @@ func init() {
 
 	log.SetLevel("warn")
 	logger = log.NewLogger(os.Stdout)
+
+	model.LoadConf()
+
+	if "dev" == model.Conf.RuntimeMode {
+		gin.SetMode(gin.DebugMode)
+	} else {
+		gin.SetMode(gin.ReleaseMode)
+	}
+	gin.DefaultWriter = io.MultiWriter(os.Stdout)
 }
 
 // Entry point.
