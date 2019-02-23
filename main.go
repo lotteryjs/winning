@@ -2,13 +2,16 @@ package main
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
-	"github.com/lotteryjs/winning/log"
-	"github.com/lotteryjs/winning/model"
 	"io"
 	"math/rand"
 	"os"
 	"time"
+
+	"github.com/gin-gonic/gin"
+
+	"github.com/lotteryjs/winning/log"
+	"github.com/lotteryjs/winning/model"
+	"github.com/lotteryjs/winning/service"
 )
 
 // Logger
@@ -33,5 +36,6 @@ func init() {
 
 // Entry point.
 func main() {
+	service.ConnectDB()
 	fmt.Println("I AM WINNING")
 }

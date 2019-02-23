@@ -1,15 +1,18 @@
 package model
 
 import (
-	"encoding/json"
 	"flag"
 	"fmt"
-	"github.com/jinzhu/gorm"
-	"github.com/lotteryjs/winning/log"
-	"io/ioutil"
 	"os"
 	"strconv"
 	"time"
+
+	"encoding/json"
+	"io/ioutil"
+
+	"github.com/jinzhu/gorm"
+
+	"github.com/lotteryjs/winning/log"
 )
 
 // Logger
