@@ -6,11 +6,11 @@ import (
 
 // Path prefixes.
 const (
-	PathRoot = "/"
-	PathAPI  = "/api"
+	PathRoot     = "/"
+	PathPlatInfo = "/plat/info"
 )
 
-var reservedPaths = []string{PathAPI}
+var reservedPaths = []string{PathPlatInfo}
 
 // IsReservedPath checks the specified path is a reserved path or not.
 func IsReservedPath(path string) bool {

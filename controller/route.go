@@ -34,14 +34,7 @@ func MapRoutes() *gin.Engine {
 	})
 	ret.Use(sessions.Sessions("winning", store))
 
-	api := ret.Group(util.PathAPI)
-	api.GET("/wnn", func(c *gin.Context) {
-		c.String(200, "Hello %s", "WINNING")
-	})
-
-	ret.NoRoute(func(c *gin.Context) {
-		notFound(c)
-	})
+	ret.GET(util.PathPlatInfo, showPlatInfoAction)
 
 	return ret
 }
