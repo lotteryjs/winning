@@ -1,6 +1,8 @@
 package password
 
-import "golang.org/x/crypto/bcrypt"
+import (
+	"golang.org/x/crypto/bcrypt"
+)
 
 // CreatePassword returns a hashed version of the given password.
 func CreatePassword(pw string, strength int) []byte {

@@ -35,7 +35,7 @@ func New(dialect, connection, defaultUser, defaultPass string, strength int, cre
 		db.DB().SetMaxOpenConns(1)
 	}
 
-	db.AutoMigrate(new(model.User), new(model.Application), new(model.Message), new(model.Client), new(model.PluginConf))
+	db.AutoMigrate(new(model.User))
 	userCount := 0
 	db.Find(new(model.User)).Count(&userCount)
 	if createDefaultUserIfNotExist && userCount == 0 {
