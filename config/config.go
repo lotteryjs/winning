@@ -1,10 +1,7 @@
 package config
 
 import (
-	"path/filepath"
-	"strings"
-
-	"github.com/gotify/configor"
+	"github.com/lotteryjs/configor"
 )
 
 // Configuration is stuff that can be configured externally per env variables or config file (config.yml).

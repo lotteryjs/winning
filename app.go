@@ -3,10 +3,11 @@ package main
 import (
 	"fmt"
 	"math/rand"
-	"os"
 	"time"
 
+	"github.com/lotteryjs/winning/config"
 	"github.com/lotteryjs/winning/mode"
+	"github.com/lotteryjs/winning/model"
 )
 
 var (
@@ -27,4 +28,10 @@ func main() {
 	fmt.Println("Starting Gotify version", vInfo.Version+"@"+BuildDate)
 	rand.Seed(time.Now().UnixNano())
 	conf := config.Get()
+
+	db, err := database.New(conf.Database.Dialect, conf.Database.Connection, conf.DefaultUser.Name, conf.DefaultUser.Pass, conf.PassStrength, true)
+	if err != nil {
+		panic(err)
+	}
+	defer db.Close()
 }
