@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/lotteryjs/winning/config"
+	"github.com/lotteryjs/winning/database"
 	"github.com/lotteryjs/winning/mode"
 	"github.com/lotteryjs/winning/model"
 )
