@@ -10,7 +10,7 @@ server:
 
 database: # for database see (configure database section)
   dialect: mysql
-  connection: root:123456@(localhost:3306)/winning?charset=utf8mb4&parseTime=True&loc=Local
+  connection: "root:123456@(localhost:3306)/winning?charset=utf8mb4&parseTime=True&loc=Local"
 
 defaultuser: # on database creation, winning creates an admin user
   name: admin # the username of the default user

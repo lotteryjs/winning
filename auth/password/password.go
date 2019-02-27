@@ -1,7 +1,7 @@
 package password
 
 import (
-	"golang.org/x/crypto/bcrypt"
+	"github.com/golang/crypto/bcrypt"
 )
 
 // CreatePassword returns a hashed version of the given password.
