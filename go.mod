@@ -3,6 +3,7 @@ module github.com/lotteryjs/winning
 go 1.12
 
 require (
+	github.com/Southclaws/configor v1.0.0 // indirect
 	github.com/gin-contrib/sse v0.0.0-20190226023149-996076df5b33 // indirect
 	github.com/gin-gonic/gin v1.3.0
 	github.com/golang/protobuf v1.3.0 // indirect
