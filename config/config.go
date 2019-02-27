@@ -24,7 +24,7 @@ type Configuration struct {
 // Get returns the configuration extracted from env variables or config file.
 func Get() *Configuration {
 	conf := new(Configuration)
-	err := configor.New(&configor.Config{EnvironmentPrefix: "WINNING"}).Load(conf, "config.yml", "/etc/gotify/config.yml")
+	err := configor.New(&configor.Config{EnvironmentPrefix: "WINNING"}).Load(conf, "config.yml", "/etc/winning/config.yml")
 	if err != nil {
 		panic(err)
 	}
