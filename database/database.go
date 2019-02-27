@@ -24,7 +24,7 @@ func New(dialect, connection, defaultUser, defaultPass string, strength int, cre
 	}
 
 	// We normally don't need that much connections, so we limit them. F.ex. mysql complains about
-	// "too many connections", while load testing Gotify.
+	// "too many connections", while load testing Winning.
 	db.DB().SetMaxOpenConns(10)
 
 	if dialect == "sqlite3" {

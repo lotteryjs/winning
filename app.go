@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	// Version the version of Gotify.
+	// Version the version of Winning.
 	Version = "unknown"
 	// Commit the git commit hash of this version.
 	Commit = "unknown"
@@ -26,7 +26,7 @@ func main() {
 	vInfo := &model.VersionInfo{Version: Version, Commit: Commit, BuildDate: BuildDate}
 	mode.Set(Mode)
 
-	fmt.Println("Starting Gotify version", vInfo.Version+"@"+BuildDate)
+	fmt.Println("Starting Winning version", vInfo.Version+"@"+BuildDate)
 	rand.Seed(time.Now().UnixNano())
 	conf := config.Get()
 

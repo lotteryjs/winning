@@ -12,7 +12,7 @@ type Configuration struct {
 	}
 	Database struct {
 		Dialect    string `default:"sqlite3"`
-		Connection string `default:"data/gotify.db"`
+		Connection string `default:"data/winning.db"`
 	}
 	DefaultUser struct {
 		Name string `default:"admin"`
